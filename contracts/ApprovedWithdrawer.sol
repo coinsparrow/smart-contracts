@@ -1,4 +1,4 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.23;
 
 import "zeppelin-solidity/contracts/ownership/Ownable.sol";
 
@@ -12,7 +12,7 @@ contract ApprovedWithdrawer is Ownable {
   event WalletRemoved(address indexed removedAddress);
   event ChangePrimaryApprovedWallet(address indexed newPrimaryWallet);
 
-  function ApprovedWithdrawer() public {
+  constructor() public {
     primaryWallet = msg.sender;
   }
 
