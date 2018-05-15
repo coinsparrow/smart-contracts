@@ -1,4 +1,4 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.23;
 
 import "zeppelin-solidity/contracts/ownership/Ownable.sol";
 
@@ -12,7 +12,7 @@ contract Arbitrator is Ownable {
   event ArbitratorRemoved(address indexed newArbitrator);
   event ChangePrimaryArbitratorWallet(address indexed newPrimaryWallet);
 
-  function Arbitrator() public {
+  constructor() public {
     primaryArbitrator = msg.sender;
   }
 
