@@ -1,4 +1,4 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.23;
 
 import "zeppelin-solidity/contracts/ownership/Ownable.sol";
 import "zeppelin-solidity/contracts/math/SafeMath.sol";
@@ -147,7 +147,7 @@ contract CoinSparrow  is Ownable, Arbitrator, ApprovedWithdrawer, Pausable {
    * @param _maxSend Maximum Wei the contract will accept in a transaction
    */
 
-  function CoinSparrow(uint256 _maxSend) public {
+  constructor(uint256 _maxSend) public {
     require(_maxSend > 0);
     //a bit of protection. Set a limit, so users can't send stupid amounts of ETH
     MAX_SEND = _maxSend;
