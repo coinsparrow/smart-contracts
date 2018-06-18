@@ -1,4 +1,4 @@
-pragma solidity ^0.4.23;
+pragma solidity 0.4.24;
 
 import "zeppelin-solidity/contracts/ownership/Ownable.sol";
 
@@ -6,7 +6,7 @@ import "zeppelin-solidity/contracts/ownership/Ownable.sol";
 contract Arbitrator is Ownable {
 
   mapping(address => bool) private aribitratorWhitelist;
-  address primaryArbitrator;
+  address private primaryArbitrator;
 
   event ArbitratorAdded(address indexed newArbitrator);
   event ArbitratorRemoved(address indexed newArbitrator);
